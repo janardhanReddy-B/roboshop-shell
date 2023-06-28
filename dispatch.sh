@@ -14,7 +14,7 @@ echo -e "\e[33mUNZIP DISPATCH CONTENT\e[0m"
 unzip /tmp/dispatch.zip &>>/tmp/roboshop.log
 cd /app &>>/tmp/roboshop.log
 
-echo -e "\e[33m INITIALIZE AND AND BUILD DISPATCH\e[0m"
+echo -e "\e[33mINITIALIZE AND AND BUILD DISPATCH\e[0m"
 go mod init dispatch &>>/tmp/roboshop.log
 go get &>>/tmp/roboshop.log
 go build &>>/tmp/roboshop.log

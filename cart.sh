@@ -18,7 +18,7 @@ echo -e "\e[33mUNZIP CART CONTENT\e[0m"
 cd /app
 unzip /tmp/cart.zip &>>/tmp/roboshop.log
 
-echo -e "\e[33m INSTALLING NODEJS DEPENDENCIES\e[0m"
+echo -e "\e[33mINSTALLING NODEJS DEPENDENCIES\e[0m"
 cd /app
 npm install &>>/tmp/roboshop.log
 
