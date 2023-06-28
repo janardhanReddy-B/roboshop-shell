@@ -34,4 +34,4 @@ mongo --host mongodb-dev.devopsbjr.online </app/schema/user.js &>>/tmp/roboshop.
 echo -e "\e[33mSTARTING USER SERVICE\e[0m"
 systemctl daemon-reload &>>/tmp/roboshop.log
 systemctl enable catalogue &>>/tmp/roboshop.log
-systemctl start catalogue &>>/tmp/roboshop.log
+systemctl restart catalogue &>>/tmp/roboshop.log
