@@ -14,7 +14,8 @@ echo -e "\e[33mUNZIPING FRONTEND CONTENT\e[0m"
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip &>>/tmp/roboshop.log
 
-#configuring roboshop.conf file
+echo -e "\e[33mCOPYING ROBOSHOP CONF FILE\e[0m"
+cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>/tmp/roboshop.log
 
 echo -e "\e[33STARTING NGINX SERVER\e[0m"
 systemctl enable nginx &>>/tmp/roboshop.log
