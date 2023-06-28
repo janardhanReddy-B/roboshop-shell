@@ -3,6 +3,7 @@ yum install golang -y &>>/tmp/roboshop.log
 
 echo -i -e "\e[33mADDING USER\e[0m"
 useradd roboshop &>>/tmp/roboshop.log
+rm -rf /app &>>/tmp/roboshop.log
 mkdir /app &>>/tmp/roboshop.log
 
 echo -i -e "\e[33mGETTING DISPATCH CONTENT\e[0m"
