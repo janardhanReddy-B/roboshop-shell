@@ -25,6 +25,7 @@ npm install &>>/tmp/roboshop.log
 echo -e "\e[33mCOPYING USER SERVICE\e[0m"
 cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service &>>/tmp/roboshop.log
 
+
 echo -e "\e[33mSTARTING USER SERVICE\e[0m"
 systemctl daemon-reload &>>/tmp/roboshop.log
 systemctl enable catalogue &>>/tmp/roboshop.log
