@@ -1,4 +1,4 @@
-echo -i -e "\e[33mINSTALLING PYTHON\Ee[0m"
+echo -i -e "\e[33mINSTALLING PYTHON\e[0m"
 yum install python36 gcc python3-devel -y &>>/tmp/roboshop.log
 
 echo -i -e "\e[33mADDING USER\e[0m"
@@ -9,7 +9,7 @@ echo -i -e "\e[33mADDED PAYMENT CONTENT\e[0m"
 curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip &>>/tmp/roboshop.log
 cd /app
 
-echo -i -e "\e[33mUNZIP PAYMENT CONTENT\Ee[0m"
+echo -i -e "\e[33mUNZIP PAYMENT CONTENT\e[0m"
 unzip /tmp/payment.zip &>>/tmp/roboshop.log
 cd /app
 
