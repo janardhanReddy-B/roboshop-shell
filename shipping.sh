@@ -1,4 +1,4 @@
-echo -i -e "\e[33mINSTALLING MAVEN\e[0m"
+echo  -e "\e[33mINSTALLING MAVEN\e[0m"
 yum install maven -y &>>/tmp/roboshop.log
 
 echo -e "\e[33mADDING USERe[0m"
