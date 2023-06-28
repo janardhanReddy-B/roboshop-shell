@@ -25,13 +25,17 @@ npm install &>>/tmp/roboshop.log
 echo -e "\e[33mCOPYING USER SERVICE\e[0m"
 cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service &>>/tmp/roboshop.log
 
+echo -e "\e[33mSTARTING USER SERVICE\e[0m"
+systemctl daemon-reload &>>/tmp/roboshop.log
+systemctl enable catalogue &>>/tmp/roboshop.log
+systemctl restart catalogue &>>/tmp/roboshop.log
+
+echo -e "\e[33mCOPYING MONGODB REPO\e[0m"
+cp /home/centos/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>/tmp/roboshop.log
+
 echo -e "\e[33mINSTALLING MONGODB SHELL\e[0m"
 yum install mongodb-org-shell -y &>>/tmp/roboshop.log
 
 echo -e "\e[33mRUNNING MONGODB SCHEMA\e[0m"
 mongo --host mongodb-dev.devopsbjr.online </app/schema/user.js &>>/tmp/roboshop.log
 
-echo -e "\e[33mSTARTING USER SERVICE\e[0m"
-systemctl daemon-reload &>>/tmp/roboshop.log
-systemctl enable catalogue &>>/tmp/roboshop.log
-systemctl restart catalogue &>>/tmp/roboshop.log
