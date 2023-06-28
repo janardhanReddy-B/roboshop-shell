@@ -1,7 +1,7 @@
 echo -i -e "\e[33mINSTALLING MAVEN\e[0m"
 yum install maven -y &>>/tmp/roboshop.log
 
-echo -i -e "\e[33mADDING USERe[0m"
+echo -e "\e[33mADDING USERe[0m"
 useradd roboshop &>>/tmp/roboshop.log
 
 echo -e "\e[33mREMOVING AND ADDING APP FOLDER\e[0m"
