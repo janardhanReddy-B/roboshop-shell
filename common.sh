@@ -62,6 +62,18 @@ maven () {
   mysql_schema_setup
 }
 
+python() {
+  echo -e "${color}INSTALLING PYTHON${nocolor}"
+  yum install python36 gcc python3-devel -y &>>${log_file}
+
+  pre_setup
+
+  echo -e "${color}INSTALLING PIP3 AND REQUIREMENTS${nocolor}"
+  pip3.6 install -r requirements.txt &>>${log_file}
+
+  systemd
+}
+
 mongo_schema_setup() {
   echo -e "${color} COPYING MONGODB REPO${nocolor}"
   cp /home/centos/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
