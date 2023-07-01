@@ -1,5 +1,3 @@
-
-
 echo -e "\e[33mConfigure YUM Repos from the vendor\e[0m"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash &>>/tmp/roboshop.log
 
